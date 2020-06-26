@@ -16,18 +16,21 @@ namespace ProductMicroservice.DBContexts
             modelBuilder.Entity<Category>().HasData(
                 new Category
                 {
-                    id = 1,
-                    name = "Electronics",
+                    Id = 1,
+                    Name = "Electronics",
+                    Description = "Electronic Items",
                 },
                 new Category
                 {
-                    id = 2,
-                    name = "Clothes",
+                    Id = 2,
+                    Name = "Clothes",
+                    Description = "Pants",
                 },
                 new Category
                 {
-                    id = 3,
-                    name = "Grocery",
+                    Id = 3,
+                    Name = "Grocery",
+                    Description = "Grocery Items",
                 }
             );
         }

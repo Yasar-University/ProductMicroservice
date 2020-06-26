@@ -9,14 +9,12 @@ namespace ProductMicroservice.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-
         private readonly IProductRepository _productRepository;
 
-        /*public ProductController(IProductRepository productRepository)
+        public ProductController(IProductRepository productRepository)
         {
             _productRepository = productRepository;
-        }*/
-
+        }
         [HttpGet]
         public IActionResult Get()
         {
@@ -38,7 +36,7 @@ namespace ProductMicroservice.Controllers
             {
                 _productRepository.InsertProduct(product);
                 scope.Complete();
-                return CreatedAtAction(nameof(Get), new { id = product.id }, product);
+                return CreatedAtAction(nameof(Get), new { id = product.Id }, product);
             }
         }
 

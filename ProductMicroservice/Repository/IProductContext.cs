@@ -1,13 +1,9 @@
-﻿using System;
+﻿using ProductMicroservice.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using ProductMicroservice.Model;
 
 namespace ProductMicroservice.Repository
 {
-    interface IProductRepository 
+    public interface IProductContext
     {
         IEnumerable<Product> GetProducts();
         Product GetProductByID(int ProductId);

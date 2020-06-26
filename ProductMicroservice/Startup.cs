@@ -28,8 +28,8 @@ namespace ProductMicroservice
         [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
-            /*services.AddRazorPages();
-            services.AddApplicationInsightsTelemetry();*/
+            services.AddRazorPages();
+            services.AddApplicationInsightsTelemetry();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<ProductContext>(o=>o.UseSqlServer(Configuration.GetConnectionString("ProductDB")));
             services.AddTransient<IProductRepository, ProductRepository>();
