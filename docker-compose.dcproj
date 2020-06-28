@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Windows</DockerTargetOS>
-    <ProjectGuid>1ea79e4c-5b11-4120-a1d9-1751b1e98b9e</ProjectGuid>
+    <ProjectGuid>2da3d4be-6ca0-41e7-8fad-fa136a2019b6</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://{ServiceIPAddress}{ServicePort}</DockerServiceUrl>
     <DockerServiceName>productmicroservice</DockerServiceName>

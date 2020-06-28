@@ -15,6 +15,12 @@ namespace ProductMicroservice.Repository
         {
             _dbContext = dbContext;
         }
+
+        public void BuySomething(Product product)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void DeleteProduct(int productId)
         {
             var product = _dbContext.Products.Find(productId);
@@ -47,6 +53,11 @@ namespace ProductMicroservice.Repository
         {
             _dbContext.Entry(product).State = EntityState.Modified;
             Save();
+        }
+
+        public void UpdateStockNumber(Product product)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

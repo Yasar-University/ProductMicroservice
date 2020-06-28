@@ -17,7 +17,7 @@ namespace ProductMicroservice.DBContexts
                 new Category
                 {
                     Id = 1,
-                    Name = "Electronics",
+                    Name = "Electronics",//DB ye kaydettiğim veriler
                     Description = "Electronic Items",
                 },
                 new Category

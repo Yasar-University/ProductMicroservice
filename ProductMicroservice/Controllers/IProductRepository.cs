@@ -10,6 +10,8 @@ namespace ProductMicroservice.Repository
         void InsertProduct(Product product);
         void DeleteProduct(int productId);
         void UpdateProduct(Product product);
+        void BuySomething(Product product);
+        void UpdateStockNumber(Product product);
         void Save();
     }
 }

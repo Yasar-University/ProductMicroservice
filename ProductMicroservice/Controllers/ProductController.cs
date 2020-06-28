@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProductMicroservice.Model;
 using ProductMicroservice.Repository;
+using System.Data.Entity.Core.Mapping;
 using System.Transactions;
 
 namespace ProductMicroservice.Controllers
@@ -9,8 +10,9 @@ namespace ProductMicroservice.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        int stocknumber = 50; //Stock local control
         private readonly IProductRepository _productRepository;
-
+        int _productstocknumber;
         public ProductController(IProductRepository productRepository)
         {
             _productRepository = productRepository;
@@ -61,5 +63,20 @@ namespace ProductMicroservice.Controllers
             _productRepository.DeleteProduct(id);
             return new OkResult();
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult BuySomething(Product product,int id)
+        {
+            _productRepository.DeleteProduct(id);
+            _productstocknumber= UpdateStockNumber(product);
+            return new OkResult();
+        }
+
+        public int UpdateStockNumber(Product product)
+        {
+            stocknumber = stocknumber - 1;//On every call it will decrease
+            return stocknumber;
+        }
+
     }
 }
